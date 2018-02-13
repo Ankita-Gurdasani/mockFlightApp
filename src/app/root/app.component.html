@@ -1,18 +1,2 @@
-<select [(ngModel)]="origin">
-    <option *ngFor="let origin of originList" value={{origin}}>
-        {{origin}}
-    </option>
-</select>
-<select [(ngModel)]="destination">
-    <option *ngFor="let destination of destinationList" value={{destination}}>
-        {{destination}}
-    </option>
-</select>
-<button (click)="searchFlights()">Search</button>
-<button (click)="resetSearch()">Reset search</button>
-<h2>Flight search results</h2>
-<p>{{errorMessage}}</p>
-<ul>
-    <li *ngFor="let flight of flightList">{{flight.origin}} --> {{flight.destination}} ({{flight.departureTime}} --> {{flight.destinationTime}}) - {{flight.price}}</li>
-</ul>
+<router-outlet></router-outlet>
 
